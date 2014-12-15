@@ -108,13 +108,13 @@ func (d SqliteDialect) ToSqlType(col *ColumnMap) string {
 	}
 
 	switch col.gotype.Name() {
-	case "NullableInt64":
+	case "NullInt64":
 		return "integer"
-	case "NullableFloat64":
+	case "NullFloat64":
 		return "real"
-	case "NullableBool":
+	case "NullBool":
 		return "integer"
-	case "NullableBytes":
+	case "NullBytes":
 		return "blob"
 	case "Time", "NullTime":
 		return "datetime"
@@ -213,13 +213,13 @@ func (d PostgresDialect) ToSqlType(col *ColumnMap) string {
 	}
 
 	switch col.gotype.Name() {
-	case "NullableInt64":
+	case "NullInt64":
 		return "bigint"
-	case "NullableFloat64":
+	case "NullFloat64":
 		return "double"
-	case "NullableBool":
+	case "NullBool":
 		return "smallint"
-	case "NullableBytes":
+	case "NullBytes":
 		return "bytea"
 	case "Time", "Nulltime":
 		return "timestamp with time zone"
@@ -332,13 +332,13 @@ func (d MySQLDialect) ToSqlType(col *ColumnMap) string {
 	}
 
 	switch col.gotype.Name() {
-	case "NullableInt64":
+	case "NullInt64":
 		return "bigint"
-	case "NullableFloat64":
+	case "NullFloat64":
 		return "double"
-	case "NullableBool":
+	case "NullBool":
 		return "tinyint"
-	case "NullableBytes":
+	case "NullBytes":
 		return "mediumblob"
 	case "Time", "NullTime":
 		return "datetime"
